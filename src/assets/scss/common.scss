@@ -1,0 +1,647 @@
+/*
+-------------------------------------------------------------------------
+<=============================   imports  ==============================>
+-------------------------------------------------------------------------
+*/
+
+@import "./variables.scss";
+@import "./responsive.scss";
+
+// components
+
+@import "../../components/Components.scss";
+
+/*
+-------------------------------------------------------------------------
+<=============== for tailwind css styles configs   =====================>
+-------------------------------------------------------------------------
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex {
+    @extend .flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*
+-------------------------------------------------------------------------
+<==============   fonts and common font styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*  Main heading */
+
+.t-h,
+h1 {
+  font-weight: 500;
+  font-size: 37px;
+  line-height: 60px;
+}
+
+/*  Main heading two */
+
+.t-h-2,
+h2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+/*  Sub Heading */
+
+.t-s-h,
+h3 {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 34px;
+}
+
+/*  Sub Heading Two */
+
+.t-s-h-2,
+h3.t-2 {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 34px;
+}
+
+/*  Common Paragraph */
+
+.t-c-p,
+p {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/*  Paragraph */
+
+.t-p,
+p.t-2 {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 34px;
+}
+
+/*  Paragraph Two */
+
+.t-p-2,
+p.t-3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+/*  text input field */
+
+.t-input {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0;
+}
+
+/*  button text */
+
+.t-button {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 26px !important;
+}
+
+/*
+-------------------------------------------------------------------------
+<==============   colors and common color styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+.purpleBg {
+  background-color: $purple;
+}
+
+.purpleCol {
+  color: $purple;
+}
+
+.yellowBg {
+  background-color: $yellow;
+}
+
+.yellowCol {
+  color: $yellow;
+}
+
+.lightYellowBg {
+  background-color: $lightYellow;
+}
+
+.lightYellowCol {
+  color: $lightYellow;
+}
+
+.whiteBg {
+  background-color: $white;
+}
+
+.whiteCol {
+  color: $white;
+}
+
+.blackBg {
+  background-color: $black;
+}
+
+.blackCol {
+  color: $black;
+}
+
+/*
+-------------------------------------------------------------------------
+<========================   for global styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  background-color: $white;
+  color: $black;
+}
+
+.cw {
+  width: 1055px;
+}
+
+section {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.rips:active {
+  filter: brightness(0.8);
+}
+
+// .rips:hover {
+//   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.5),
+//     10px 10px 20px rgba(70, 70, 70, 0.12);
+// }
+
+// button
+
+.btn-t-1 {
+  background-color: $yellow !important;
+  color: $black !important;
+}
+.btn-t-2 {
+  background-color: $purple !important;
+  color: $white !important;
+}
+
+button {
+  @extend .t-button;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+  text-transform: none !important;
+}
+
+// tabs
+
+.tabCont {
+  .MuiTabs-root {
+    width: 100%;
+    .MuiTabs-flexContainer {
+      justify-content: center;
+      button {
+        border-radius: 3px;
+        margin: 2px;
+        @extend .t-button;
+        color: $black;
+        border: 1px solid $purple;
+        padding: 10px 20px;
+        &.Mui-selected {
+          background-color: $purple;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .tableBody {
+    width: 100%;
+
+    .MuiTabPanel-root {
+      padding: 0;
+    }
+  }
+
+  // removals
+  .MuiTabs-indicator {
+    display: none;
+  }
+}
+
+.activeParentMenu {
+  color: $purple;
+}
+/*
+-------------------------------------------------------------------------
+<=======================   for header section  ========================>
+-------------------------------------------------------------------------
+*/
+
+// marquee
+
+.headerMarquee {
+  @extend .purpleBg;
+  overflow: hidden;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-transform: uppercase;
+  span {
+    @extend .yellowCol;
+  }
+}
+
+.headerCont {
+  padding: 12px 0;
+  .headerMenus {
+    div {
+      @extend .t-p-2;
+      margin-right: 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .menuWrap {
+      a.active {
+        div {
+          color: $purple;
+        }
+      }
+    }
+  }
+  .menuIcon {
+    background-color: $white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+/*
+-------------------------------------------------------------------------
+<=======================   for home section  ========================>
+-------------------------------------------------------------------------
+*/
+
+// section two
+
+.homeSecTwo {
+  padding: 0px !important;
+  color: $white;
+  .forBg > .left,
+  .forBg > .right {
+    padding: 54px 0;
+  }
+  .forBg > .right h3 {
+    color: $black;
+  }
+}
+
+// section three
+
+.hs-3 {
+  padding: 80px 20px;
+}
+
+// section four
+
+.hs-4 {
+  background-color: $yellow;
+  padding: 80px 20px;
+}
+
+// section five
+
+.hs-5 {
+  padding: 80px 20px 20px 20px;
+  p.t-2 {
+    text-align: center;
+  }
+}
+
+// section six
+
+.hs-6 {
+  background-color: $purple;
+  padding: 80px 20px;
+  color: $white;
+}
+
+// section seven
+.hs-7 {
+  padding: 80px 20px;
+}
+
+// section eight
+.hs-8 {
+  padding: 80px 20px;
+  background-color: $yellow;
+  color: $black;
+}
+// section eight
+.hs-9 {
+  padding: 80px 20px;
+  background-color: #f1f1bb;
+  color: $black;
+}
+
+/*
+-------------------------------------------------------------------------
+<=======================   for footer section  ========================>
+-------------------------------------------------------------------------
+*/
+.footerSec {
+  background-color: $purple;
+  padding: 80px 20px;
+  color: $white;
+  .fLogo {
+    width: 187px;
+    height: 31px;
+  }
+  .footerMenus {
+    a {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      width: 100%;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  .socialIcon {
+    .footIcon {
+      width: 40px;
+      height: 40px;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+  .contactIcon {
+    margin-right: 8px;
+  }
+  .copyRights {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+}
+
+/*
+-------------------------------------------------------------------------
+<=======================   for about-us section  ========================>
+-------------------------------------------------------------------------
+*/
+
+// section two
+.a-2 {
+  background-color: $yellow;
+  padding: 40px 20px;
+  .card {
+    background: $white;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 30px 60px;
+    h1,
+    h3 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// section three
+.a-3 {
+  padding: 80px 20px 20px 20px;
+}
+
+// section four
+.a-4 {
+  background-color: $purple;
+  padding: 80px 20px;
+  color: $white;
+}
+
+// section five
+.a-5 {
+  padding: 80px 20px;
+  .aboutTrainerCard {
+    .conentWrap {
+      width: 100%;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// section seven
+.a-7 {
+  padding: 80px 20px;
+  .withBg {
+    background-image: url("../images/aboutSecSevenBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 80px;
+    text-align: center;
+    button {
+      margin-top: 50px;
+    }
+  }
+}
+
+/*
+-------------------------------------------------------------------------
+<=======================   for courses section  ========================>
+-------------------------------------------------------------------------
+*/
+
+// ui ux design
+
+// section one
+
+.c-1 {
+  padding: 80px 20px 20px 20px;
+}
+
+// section two
+.c-2 {
+  background-color: $purple;
+  padding: 80px 20px;
+  color: $white;
+}
+
+// section three
+
+.c-3 {
+  padding: 80px 20px;
+}
+
+// section four
+.c-4 {
+  padding: 80px 20px;
+  color: $white;
+  background-color: $purple;
+}
+
+// section five
+.c-5 {
+  padding: 80px 20px;
+}
+
+// section six
+.c-6 {
+  padding: 80px 20px;
+  background-color: $lightYellow;
+}
+
+// section seven
+.c-7 {
+  padding: 60px 20px;
+  .trainModelCard {
+    background-color: $purple;
+    border-radius: 10px;
+
+    color: $white;
+    .left {
+      .imgWrap {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+    }
+    .right {
+      h1 {
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+      button {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+// section eight
+
+.c-8 {
+  padding: 80px 20px;
+  background-color: $purple;
+  color: $white;
+  .right {
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    .contentWrap {
+      display: flex;
+      place-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      .imgWrap {
+        img {
+          width: 18px;
+          height: 18px;
+          margin-right: 20px;
+          margin-top: 8px;
+          border-radius: 50%;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &.yellowBg {
+    background-color: $yellow;
+    color: $black;
+  }
+
+  .Wrap {
+    .contentWrap:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .customPoints {
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 20px;
+      margin-top: 8px;
+      border-radius: 50%;
+    }
+  }
+}
+
+// section nine
+
+.c-9 {
+  padding: 80px 20px;
+  .courseTrainerCard {
+    .conentWrap {
+      width: 100%;
+    }
+  }
+}
+
+// section eleven
+
+.c-11 {
+  padding: 80px 20px;
+}
+
+/*
+-------------------------------------------------------------------------
+<=======================   for courses offered  ========================>
+-------------------------------------------------------------------------
+*/
+
+.co-1,
+.hs-3 {
+  padding: 80px 20px;
+  .MuiTabs-flexContainer {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}

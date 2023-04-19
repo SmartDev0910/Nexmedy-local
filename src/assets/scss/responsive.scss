@@ -1,0 +1,282 @@
+// imports
+
+@import "./variables.scss";
+
+/* Extra small devices (phones, 640px and down) */
+@media only screen and (max-width: 640px) {
+  /*
+-------------------------------------------------------------------------
+<==============   fonts and common font styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+  .t-h,
+  h1 {
+    font-size: 29px !important;
+    line-height: 40px !important;
+  }
+
+  .t-p,
+  p.t-2 {
+    font-size: 19px !important;
+    line-height: 30px !important;
+  }
+
+  .t-s-h-2,
+  h3.t-2 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  .t-c-p,
+  p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .t-s-h,
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  // tabs
+
+  .t-button,
+  .tabCont {
+    .MuiTabs-root {
+      .MuiTabs-flexContainer {
+        button {
+          padding: 5px 10px !important;
+          min-width: 60px !important;
+          min-width: 55px !important;
+          letter-spacing: 0 !important;
+        }
+      }
+    }
+  }
+
+  /*
+-------------------------------------------------------------------------
+<=======================   components  ==================================>
+-------------------------------------------------------------------------
+*/
+
+  .courseCard {
+    .cardDet {
+      h3 {
+        margin-bottom: 15px !important;
+      }
+    }
+  }
+
+  // swiper
+  .testimonialSwiper {
+    padding-bottom: 80px !important;
+
+    .swiperWrap {
+      padding: 60px 15px 30px 15px !important;
+      .testimonialHead {
+        margin-bottom: 10px !important;
+      }
+      .left {
+        .imgWrap {
+          margin-bottom: 20px;
+        }
+      }
+      .right p {
+        text-align: center;
+      }
+    }
+  }
+
+  // form data
+  .formWrap {
+    padding: 25px !important;
+    margin-top: 30px !important;
+  }
+
+  // contact form
+
+  .contactDrawer {
+    .contactWrapContent {
+      .left {
+        padding: 30px 0px 30px 20px !important;
+      }
+      .right {
+        padding: 30px 20px 30px 0px !important;
+        .addressWrap {
+          margin-left: 0px !important;
+          margin-top: 20px !important;
+        }
+      }
+    }
+  }
+  /*
+-------------------------------------------------------------------------
+<===================   home section styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+  .homeSecTwo {
+    background-image: none;
+    .forBg > .left {
+      background-color: $purple;
+      padding: 30px !important;
+    }
+    .forBg > .right {
+      background-color: $yellow !important;
+      padding: 30px !important;
+    }
+  }
+
+  // section five
+  .hs-5 {
+    p.t-2 {
+      text-align: center;
+    }
+  }
+
+  // section six
+  .hs-6 {
+    .cw {
+      width: 100% !important;
+    }
+  }
+
+  // section seven
+  .hs-7 {
+    .formWrap {
+      padding: 25px !important;
+    }
+  }
+
+  /*
+-------------------------------------------------------------------------
+<===================   about section styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+  // section seven
+  .a-7 {
+    .withBg {
+      padding: 30px !important;
+      button {
+        margin-top: 20px !important;
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+  /*
+-------------------------------------------------------------------------
+<===================   home section styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+  .homeSecTwo {
+    background-image: none;
+    .forBg > .left {
+      background-color: $purple;
+    }
+    .forBg > .right {
+      background-color: $yellow !important;
+    }
+  }
+
+  // components
+
+  // swiper
+  .testimonialSwiper {
+    padding-bottom: 80px !important;
+
+    .swiperWrap {
+      padding: 60px 15px 30px 15px !important;
+      .testimonialHead {
+        margin-bottom: 10px !important;
+      }
+      .left {
+        .imgWrap {
+          margin-bottom: 20px;
+        }
+      }
+      .right p {
+        text-align: center;
+      }
+    }
+  }
+
+  // home section seven
+  .hs-6 {
+    .cw {
+      width: 100%;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  // components
+  // swiper
+  .testimonialSwiper {
+    padding-bottom: 80px !important;
+
+    .swiperWrap {
+      padding: 60px 100px 30px 100px !important;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+  // components
+  // swiper
+  .testimonialSwiper {
+    padding-bottom: 80px !important;
+
+    .swiperWrap {
+      .testimonialHead {
+        margin-bottom: 30px !important;
+      }
+      .left {
+        .imgWrap {
+          margin-bottom: 0px !important;
+        }
+      }
+      .right p {
+        text-align: start !important;
+      }
+    }
+  }
+
+  // home section seven
+  .hs-6 {
+    .cw {
+      width: 1055px !important;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1280px and up) */
+@media only screen and (min-width: 1280px) {
+  /*
+-------------------------------------------------------------------------
+<===================   home section styles  ========================>
+-------------------------------------------------------------------------
+*/
+
+  .homeSecTwo {
+    background-image: linear-gradient(90deg, $purple 50%, $yellow 50%);
+
+    .forBg > .left {
+      background-color: transparent !important;
+    }
+    .forBg > .right {
+      background-color: transparent !important;
+    }
+  }
+}
